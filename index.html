@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praktikum Tailwind CSS - Grid Layout dan Dark Mode</title>
+  <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
+    <header class="bg-primary text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <h1 class="text-2xl font-bold">Galeri Foto</h1>
+          <button id="dark-mode-toggle" class="btn toggle-dark-mode">Dark Mode</button>
+        </div>
+      </header>
+      <section class="py-20">
+        <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-4">Selamat Datang di Galeri Kami</h2>
+          <p class="text-lg mb-8">Koleksi foto terbaik untuk Anda.</p>
+        </div>
+      </section>
+      <section class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="  Poto1.jpg" alt="Foto 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Mantan Ke-1</h3>
+              <p class="text-gray-600 dark:text-gray-400">Sangat baik namun moodyan.</p>
+            </div>
+          </div>
+          <!-- Tambahkan Card 2, 3, dst. dengan struktur yang sama -->
+          <!-- Card 2 -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="Poto2.jpg" alt="Foto 2" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Mantan Ke-2</h3>
+              <p class="text-gray-600 dark:text-gray-400">Kenangan paling lama.</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="Poto3.jpg" alt="Foto 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Mantan Ke-3</h3>
+              <p class="text-gray-600 dark:text-gray-400">Dewasa dan baik.</p>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="Poto4.jpg" alt="Foto 4" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Hobby ku</h3>
+              <p class="text-gray-600 dark:text-gray-400">Bersepeda.</p>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="Poto5.jpg" alt="Foto 5" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Fotoku</h3>
+              <p class="text-gray-600 dark:text-gray-400">Main.</p>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <img src="Poto6 (2).jpg" alt="Foto 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Healing</h3>
+              <p class="text-gray-600 dark:text-gray-400">Main lah sokin.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="bg-primary text-white p-4 mt-10">
+        <div class="container mx-auto text-center">
+          <p>&copy; 2024 Galeri Foto. All rights reserved.</p>
+        </div>
+      </footer>
+      <script>
+        const toggleDarkMode = document.getElementById('dark-mode-toggle');
+        const htmlElement = document.documentElement;
+      
+        toggleDarkMode.addEventListener('click', () => {
+          htmlElement.classList.toggle('dark');
+        });
+      </script>
+</body>
+</html>
